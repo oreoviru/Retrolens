@@ -1,57 +1,72 @@
 # RetroLens 🖐️✨
 
-Portal filter real-time pakai gerakan tangan, dibikin pake Python + MediaPipe.
+A real-time hand gesture-controlled camera filter portal built with Python, OpenCV, and MediaPipe.
 
-Bentangin dua tangan buat buka portal, area di dalamnya kena filter (dual-tone, thermal, sketch, glitch, dll). Ganti filter tinggal pinch jempol-kelingking.
+Spread both hands apart to open a dimensional portal window in your webcam feed. The area inside the portal is transformed in real-time with vibrant visual effects (dual-tone, thermal, sketch, glitch, and more). Cycle through filters on the fly using a simple thumb-to-pinky pinch gesture!
 
 ---
 
-## 🇮🇩 Indonesia
+## 🚀 Installation
 
-**Install** (Python 3.8–3.11):
+Ensure you have **Python 3.8 – 3.11** installed:
+
 ```bash
 pip install -r requirements.txt
 ```
-> ⚠️ Pengguna Apple Silicon: jangan upgrade mediapipe dari versi yang di-pin (`0.10.9`) — versi baru ada bug di chip ARM Mac.
 
-**Jalanin:**
-```bash
-python3 Retrolens.py   # Mac/Linux
-python Retrolens.py    # Windows
-```
-
-**Kontrol:**
-- Bentangin 2 tangan → buka portal
-- Pinch jempol-kelingking → ganti filter
-- Kepal 2 tangan / tombol `C` → toggle mode 2D/3D
-- `N`/`P` → filter berikutnya/sebelumnya, `S` → screenshot, `Q` → keluar
-
-Dibikin sambil belajar OpenCV + MediaPipe.
+> ⚠️ **Apple Silicon Users:** Do not upgrade `mediapipe` beyond the pinned version (`0.10.9`) — newer versions have known issues on ARM Macs.
 
 ---
 
-## 🇬🇧 English
+## ▶️ Running RetroLens
 
-**Install** (Python 3.8–3.11):
 ```bash
-pip install -r requirements.txt
-```
-> ⚠️ Apple Silicon users: don't upgrade mediapipe past the pinned version (`0.10.9`) — newer releases are buggy on ARM Macs.
-
-**Run:**
-```bash
-python3 Retrolens.py   # Mac/Linux
+python3 Retrolens.py   # macOS / Linux
 python Retrolens.py    # Windows
 ```
 
-**Controls:**
-- Spread both hands → open portal
-- Pinch thumb + pinky → switch filter
-- Fist both hands / press `C` → toggle 2D/3D mode
-- `N`/`P` → next/previous filter, `S` → screenshot, `Q` → quit
-
-Built while learning OpenCV + MediaPipe.
+> **macOS Note:** Make sure camera permissions are enabled in:  
+> *System Settings → Privacy & Security → Camera*.
 
 ---
 
-MIT License
+## 🎮 Controls & Gestures
+
+| Gesture / Key | Action |
+| :--- | :--- |
+| **Spread both hands** | Open and scale the portal |
+| **Pinch thumb + pinky** | Switch to the next filter |
+| **Fist both hands** or `C` | Toggle 2D / 3D wireframe mesh mode |
+| `N` / `P` | Next / previous filter |
+| `S` | Take screenshot (`cap_<timestamp>.png`) |
+| `Q` | Quit application |
+
+---
+
+## 🎨 Available Filters
+
+- **Dual Tone**: Stylized high-contrast two-tone threshold
+- **Thermal**: Jet colormap heatmap effect
+- **Sketch**: Hand-drawn pencil sketch
+- **Pixelate**: 8-bit retro pixelation
+- **Glitch**: RGB chromatic shift with scanline artifacts
+- **Invert**: Color negative inversion
+- **Red Channel**: High-intensity red monochrome channel
+- **Edge**: Neon Canny edge detection
+- **Blur**: Heavy Gaussian depth blur
+- **Cartoon**: Bilateral smoothing with ink outlines
+- **Rainbow Wave**: Dynamic oscillating HSV rainbow wave
+
+---
+
+## 🛠️ Built With
+
+- [OpenCV](https://opencv.org/) — Real-time computer vision & image processing
+- [MediaPipe](https://developers.google.com/mediapipe) — Hand tracking & landmark detection
+- [NumPy](https://numpy.org/) — Array manipulation & coordinate math
+
+---
+
+## 📄 License
+
+Distributed under the [MIT License](LICENSE).
